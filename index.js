@@ -9,15 +9,15 @@ const fruits = [
 
 ];
 let situacao = 'Aberto';
+let nome = 'PetMaster';
 
-
-function getChamadosEmAberto(chamados,situacao){
+function getChamadosEmAberto(chamados,situacao,cliente){
     for(let chamado of chamados){
-        if(chamado.status === situacao){
+        if(chamado.status === situacao && chamado.cliente === cliente){
             return chamado
             
         }else{
-            return null
+            return 0
         }
     }
 }
